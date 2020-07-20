@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    
+    <script>
+        /*
+        window.onload = function() {
+            //클릭이벤트
+            var btn = document.getElementById("btn");
+            btn.onclick = function() {
+                alert("이벤트등록 성공");
+            }
+            //체인지이벤트
+            var tag = document.getElementById("tag");
+            tag.onchange = function() {
+                console.log("변경...");
+            }
+        }
+        */
+
+        $(document).ready(function() {
+            //클릭이벤트
+            $("#btn").click(function() {
+                alert("이벤트 등록");
+            })
+
+            //체인지이벤트
+            $("#tag").change(function() {
+                console.log("변경...")
+            })
+        })
+    </script>
+
+    <button type="button" id="btn">이벤트테스트</button>
+    <input type="text" id="tag">
+
+
+</body>
+</html>

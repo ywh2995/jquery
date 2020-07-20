@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    
+    <a href="#" class="test1">테스트1</a>
+    <a href="#" class="test2">테스트2</a>
+    <a href="#" class="test3">테스트3</a>
+
+    <script>
+        document.querySelector(".test1").href = "변경1"; //자바스크립트
+        $(".test1").attr("href", "변경2"); //제이쿼리
+
+        document.querySelector(".test2").innerHTML = "변경1";
+        $(".test2").html("변경2");
+
+        document.querySelector(".test3").style.color = "yellow";
+        $(".test3").css("color", "red");
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    
+
+    <input type="text" id="test1" readonly><br>
+    <input type="text" class="test1" value="홍길자"><br>
+    <input type="hidden" value="홍길동"><br>
+    
+    <script>
+        //자바스크립트(id값 확인)
+        var a1 = document.getElementById("test1").id;
+        console.log(a1);
+        
+        //제이쿼리
+        //var b1 = $("#test"); //선택자로 실행시, 제이쿼리에서 사용할 수 있는 객체를 리턴
+        //var b1 = $("#test1")[0]; //노드선택
+        var b1 = $("test1").attr("id"); //attr("값")은 요소의 속성확인
+        console.log(b1);
+        
+        console.log("---------------------------------------------------");
+        var a2 = document.querySelector(".test1").value;
+        console.log(a2);
+
+        var b2 = $(".test1").val(); //제이쿼리 값의 확인
+        console.log(b2);
+
+        $(".test1").val("이순신"); //제이쿼리 값의 변경
+
+        console.log("----------------------------------------------------");
+        var a3 = document.querySelector("input[type=hidden]").value;
+        console.log(a3);
+
+        var b3 = $("input[type=hidden]").val();
+        console.log(b3);
+    </script>
+
+</body>
+</html>
